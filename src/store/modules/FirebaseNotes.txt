@@ -1,0 +1,8 @@
+The first time use POST, it generates a unique ID
+Store the returned ID as a key in the object
+
+In future calls, check if ID exists,
+		if it does
+		use PUT
+		else
+		use POST

@@ -1,0 +1,64 @@
+
+
+To do in A7
+Add authentication
+
+- in menu and a drop down for sign-up, Sign-in, Log-out,
+
+Create the following components:
+    Sign up
+    Sign In
+    Household
+    Roomie
+
+
+ Authentication should:
+    Sign up allows user access to one or more houses in separate instances
+        -- You must sign out of one to enter another
+    Should be able to create a new house
+        -- you are now admin
+    join an existing house
+
+
+
+  Questions to answer:
+    How to allocate chores across users when n-users != n-chores
+
+
+
+Each user gets a unique key. That key is the name of of an object in Firebase.
+That object holds the names of the different data endpoints for chores, house, etc.
+OR
+It holds the names of the houses they are in.
+Then each house has its own set of data fields.
+
+Should I start a whole new project and begin with authentication?
+  - maybe not. I can build an authentication module.
+
+Map of Use
+New user is taken to sign up page
+user signs up and either joins a Household or creates a new one.
+Once signed up user is taken to a Household page which shows the members of the Household
+
+From there they can naviate to the supplies, chores, or admin/account components
+
+
+When a new house is created there are no chores or supplies. The user must add them.
+
+
+
+Terms:
+
+House: a house consists of: chores and supplies
+Household: a group of users accessing the same house
+User: a member of a household
+
+
+A7 - Project Plan
+Build with authentication and limited chore & supply.
+The only C&S functions will be to create them. Display will be limited to a simple list of each together on one page.
+A8 will integrate A6 & A7
+A7 will be able to log in a user, create houses/households, create chores & supplies
+A7 will demonstrate ability to have multiple users using multiple instances of the app
+Example: Purple House and Casa Corazones will each be able to have their own 'instance'
+
